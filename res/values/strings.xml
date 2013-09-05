@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Google Image Search</string>
+    <string name="action_settings">Settings</string>
+    <string name="txtSearchButton">Search</string>
+    <string name="hintQuery">Search for&#8230;</string>
+    <string name="txtFilterGroupLabel">Filters</string>
+    <string name="txtFilterNameColor">Color</string>
+    <string name="title_activity_color_filter">Filter by Color</string>
+
+    <string-array name="arrayImageSizes">
+        <item>@string/txtImageSize_Icon</item>
+        <item>@string/txtImageSize_Small</item>
+        <item>@string/txtImageSize_Medium</item>
+        <item>@string/txtImageSize_Large</item>
+        <item>@string/txtImageSize_Xlarge</item>
+        <item>@string/txtImageSize_Xxlarge</item>
+        <item>@string/txtImageSize_Huge</item>
+    </string-array>
+    <string-array name="arrayColors">
+        <item>@string/txtColorName_Blue</item>
+        <item>@string/txtColorName_Red</item>
+        <item>@string/txtColorName_Green</item>
+        <item>@string/txtColorName_Purple</item>
+        <item>@string/txtColorName_Black</item>
+        <item>@string/txtColorName_Orange</item>
+        <item>@string/txtColorName_White</item>
+    </string-array>
+    <string-array name="arrayImageTypes">
+        <item>@string/txtImageType_Face</item>
+        <item>@string/txtImageType_Photo</item>
+        <item>@string/txtImageType_ClipArt</item>
+        <item>@string/txtImageType_LineArt</item>
+    </string-array>
+
+    <string name="txtColorName_Blue">blue</string>
+    <string name="txtColorName_Red">red</string>
+    <string name="txtColorName_Green">green</string>
+    <string name="txtColorName_Purple">purple</string>
+    <string name="txtColorName_Gray">grey</string>
+    <string name="txtColorName_Black">black</string>
+    <string name="txtColorName_Brown">brown</string>
+    <string name="txtColorName_Orange">orange</string>
+    <string name="txtColorName_Pink">pink</string>
+    <string name="txtColorName_White">white</string>
+    <string name="txtColorName_Yellow">yellow</string>
+    <string name="txtImageSize_Icon">icon</string>
+    <string name="txtImageSize_Small">small</string>
+    <string name="txtImageSize_Medium">medium</string>
+    <string name="txtImageSize_Large">large</string>
+    <string name="txtImageSize_Xlarge">xlarge</string>
+    <string name="txtImageSize_Xxlarge">xxlarge</string>
+    <string name="txtImageSize_Huge">huge</string>
+    <string name="txtImageType_Face">face</string>
+    <string name="txtImageType_Photo">photo</string>
+    <string name="txtImageType_ClipArt">clipart</string>
+    <string name="txtImageType_LineArt">lineart</string>
+    <string name="title_activity_advanced_search">AdvancedSearchActivity</string>
+    <string name="lblImageSize">Image Size</string>
+    <string name="lblColorFilter">Color Filter</string>
+    <string name="lblImageType">Image Type</string>
+    <string name="lblSite">Site</string>
+    <string name="txtAdvancedSearch">Advanced Search</string>
+    <string name="ellipsis">&#8230;</string>
+    <string name="txtSaveFilterState">Apply Filters</string>
+    <string name="txtSearchError">Please enter a search term.</string>
+    <string name="txtSearchUriBase">https://ajax.googleapis.com/ajax/services/search/images?</string>
+
+</resources>
