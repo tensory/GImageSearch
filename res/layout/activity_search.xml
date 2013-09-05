@@ -78,6 +78,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:text="@string/txtMoreResultsLabel"
+        android:onClick="onClickMoreResults"
         android:visibility="invisible" />
 
 </RelativeLayout>

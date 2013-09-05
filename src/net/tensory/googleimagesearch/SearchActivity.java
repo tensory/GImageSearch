@@ -35,8 +35,9 @@ public class SearchActivity extends Activity {
 	ImageResultArrayAdapter imageAdapter;
 	String searchParams;
 	
-	public static final int ADVANCED_SEARCH_ACTIVITY_ID = 9; // I just pulled this number out of a hat, what should I have used?
-	public static final int RESULT_COUNT = 8; 
+	public static final int ADVANCED_SEARCH_ACTIVITY_ID = 9;
+	public static final int RESULT_COUNT = 8;
+	protected int resultStartIndex = 0;
 	
     List<String> listFilterDataHeader;
     HashMap<String, List<String>> listFilterDataChild;
@@ -80,15 +81,20 @@ public class SearchActivity extends Activity {
 	}
 	
 	public void onImageSearch(View v) {
+		doNewSearch();
+	}
+	
+	public void doNewSearch() {
+		// Reset the result start index
+		resultStartIndex = 0;
 		doSearch();
-		
 	}
 	
 	public void doSearch() {
 		String query = etQuery.getText().toString();
 
 		AsyncHttpClient searchClient = new AsyncHttpClient();
-		String queryString = searchUriBase + "start=" + 0 + "&q=" + Uri.encode(query);
+		String queryString = searchUriBase + "start=" + resultStartIndex + "&q=" + Uri.encode(query);
 		
 		if (query.length() == 0) {
 			Toast.makeText(this, getResources().getString(R.string.txtSearchError), Toast.LENGTH_LONG).show();
@@ -123,6 +129,11 @@ public class SearchActivity extends Activity {
 	public void onAdvancedSearchClick(View v) {
 		startActivityForResult(new Intent(getApplicationContext(), AdvancedSearchActivity.class), SearchActivity.ADVANCED_SEARCH_ACTIVITY_ID);
 	}
+	
+	public void onClickMoreResults(View v) {
+		resultStartIndex += RESULT_COUNT;
+		doSearch();
+	}
 		
 	protected void onActivityResult(int requestCode, int resultCode,
 	          Intent data) {
@@ -131,7 +142,7 @@ public class SearchActivity extends Activity {
 	            String paramString = data.getStringExtra("searchParams");
 	            if (paramString.length() > 0) {
 	            	this.searchParams = paramString;
-	            	this.doSearch();
+	            	this.doNewSearch();
 	            }
 	          }
 	      }
