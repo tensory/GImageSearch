@@ -35,6 +35,7 @@ public class SearchActivity extends Activity {
 	String searchParams;
 	
 	public static final int ADVANCED_SEARCH_ACTIVITY_ID = 9; // I just pulled this number out of a hat, what should I have used?
+	public static final int RESULT_COUNT = 9;
 	
     List<String> listFilterDataHeader;
     HashMap<String, List<String>> listFilterDataChild;
@@ -48,7 +49,7 @@ public class SearchActivity extends Activity {
 		setupViews();
 		imageAdapter = new ImageResultArrayAdapter(this, imageResults);
 		gvResults.setAdapter(imageAdapter);
-		searchUriBase = getResources().getString(R.string.txtSearchUriBase) + "rsz=8&v=1.0&";
+		searchUriBase = getResources().getString(R.string.txtSearchUriBase) + "rsz=" + RESULT_COUNT + "&v=1.0&";
 		searchParams = "";
 	}
 
