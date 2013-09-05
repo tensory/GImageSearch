@@ -66,5 +66,6 @@
     <string name="txtSaveFilterState">Apply Filters</string>
     <string name="txtSearchError">Please enter a search term.</string>
     <string name="txtSearchUriBase">https://ajax.googleapis.com/ajax/services/search/images?</string>
+    <string name="txtMoreResultsLabel">See more...</string>
 
 </resources>

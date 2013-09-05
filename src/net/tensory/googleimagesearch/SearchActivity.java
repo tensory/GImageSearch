@@ -28,6 +28,7 @@ import net.tensory.googleimagesearch.ImageResult;
 public class SearchActivity extends Activity {
 	EditText etQuery;
 	Button btnSearch;
+	Button btnMoreResults;
 	GridView gvResults;
 	TextView txtAdvancedSearchButton;
 	ArrayList<ImageResult> imageResults = new ArrayList<ImageResult>();
@@ -65,6 +66,7 @@ public class SearchActivity extends Activity {
 		btnSearch = (Button) findViewById(R.id.btnSearch);
 		gvResults = (GridView) findViewById(R.id.gvResults);
 		txtAdvancedSearchButton = (TextView) findViewById(R.id.txtAdvancedSearchLabel);
+		btnMoreResults = (Button) findViewById(R.id.btnMoreResults);
 	}
 	
 	public void setupFilters() {
@@ -108,6 +110,8 @@ public class SearchActivity extends Activity {
 									"responseData").getJSONArray("results");
 							imageResults.clear();
 							imageAdapter.addAll(ImageResult.fromJSONArray(imageJsonResults));
+							
+							showMoreResultsInterface();
 						} catch (JSONException e) {
 							e.printStackTrace();
 						}
@@ -131,5 +135,9 @@ public class SearchActivity extends Activity {
 	            }
 	          }
 	      }
+	}
+	
+	public void showMoreResultsInterface() {
+		btnMoreResults.setVisibility(View.VISIBLE);
 	}
 }
