@@ -35,7 +35,7 @@ public class SearchActivity extends Activity {
 	String searchParams;
 	
 	public static final int ADVANCED_SEARCH_ACTIVITY_ID = 9; // I just pulled this number out of a hat, what should I have used?
-	public static final int RESULT_COUNT = 9;
+	public static final int RESULT_COUNT = 8; 
 	
     List<String> listFilterDataHeader;
     HashMap<String, List<String>> listFilterDataChild;
